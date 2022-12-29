@@ -1,0 +1,30 @@
+<head>
+    <title>修正一覧画面</title>
+</head>
+<mat-toolbar>
+    <a routerLink="."><img src="assets/img/money.png"/></a>
+    <a>支出管理アプリ Correct</a>
+</mat-toolbar>
+
+    <div *ngIf="shishutsuModels.length > 0">
+        <p>検索結果</p>
+        <table>
+            <tr>
+                <th>詳細画面</th><th>ユーザID</th><th>費用名称</th><th>費用種別</th><th>月額</th>
+            </tr>
+            <tr *ngFor="let shishutsuModel of shishutsuModels">
+                <td><button routerLink="/appCorrectDetail" mat-raised-button color="primary" (click)="detailInfo(shishutsuModel.userId,shishutsuModel.costName,shishutsuModel.costType,shishutsuModel.cost,shishutsuModel.entryNo)">修正詳細</button></td>
+                <td>{{shishutsuModel.userId}}</td>
+                <td>{{shishutsuModel.costName}}</td>
+                <td>{{shishutsuModel.costType}}</td>
+                <td>{{shishutsuModel.cost}}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <div class="content" role="main">
+        <button  mat-raised-button color="primary" routerLink="/mainMenu">メインメニューへ戻る</button> 
+    </div>

@@ -1,0 +1,29 @@
+<head>
+<title>登録画面</title>
+</head>
+<mat-toolbar>
+    <a routerLink="."><img src="assets/img/money.png"/></a>
+    <a>支出管理アプリ Register</a>
+</mat-toolbar>
+
+    <table>
+        <p>ユーザID</p>
+        <input type="text" placeholder="00001" name="userId" disabled="disabled" [(ngModel)]="userId">
+        <p>費用名称</p>
+        <input type="text" placeholder="NetFlix" name="costName" [(ngModel)]="costName">
+        <p>費用種別</p>
+            <select [(ngModel)]="costType">
+                <option *ngFor="let code of codeMstModels" [ngValue]="code.codeName">{{code.codeName}}</option>
+            </select>
+        <p>金額</p>
+        <input type="text" name="cost" [(ngModel)]="cost">
+    </table>
+
+    <br>
+    <div class="content" role="main">
+        <button (click)="registInfo()"  mat-raised-button color="primary">登録</button> 
+    </div>
+    <br>
+    <div class="content" role="main">
+        <button  mat-raised-button color="primary" routerLink="/mainMenu">メインメニューへ戻る</button> 
+    </div>

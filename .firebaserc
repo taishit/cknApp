@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-chat-5e348": {
+      "hosting": {
+        "cknApp": [
+          "angular-chat-5e348"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-chat-5e348"
+  }
+}

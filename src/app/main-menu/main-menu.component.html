@@ -1,0 +1,32 @@
+<mat-toolbar>
+    <a><mat-icon (click)="sidenav.toggle()">menu</mat-icon></a>
+    <a routerLink="."><img src="assets/img/money.png"/></a>
+    <a>支出管理アプリ MainMenu</a>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened #sidenav>
+      <div class="list-group">
+        <a class="list-group-item list-group-item-action" routerLink=".">
+          <i class="bi bi-house-door-fill white-icon menu-icon"></i><span>ホーム</span>
+        </a>
+        <a class="list-group-item list-group-item-action" routerLink="/mainMenu/management">
+          <i class="bi bi-code-slash white-icon menu-icon"></i><span>管理ページ詳細</span>
+        </a>
+        <a class="list-group-item list-group-item-action" routerLink="/mainMenu/masterManagement">
+          <i class="bi bi-book white-icon menu-icon"></i><span>マスタ管理</span>
+        </a>
+        <a class="list-group-item list-group-item-action" routerLink="/passChange">
+          <i class="bi bi-gear white-icon menu-icon"></i><span>パスワード変更</span>
+        </a>
+        <a class="list-group-item list-group-item-action" (click)="logout()">
+          <i class="bi bi-exclamation-circle white-icon menu-icon"></i><span>ログアウト</span>
+        </a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <body>
+      <router-outlet></router-outlet>
+    </body>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

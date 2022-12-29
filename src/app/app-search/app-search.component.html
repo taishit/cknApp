@@ -1,0 +1,31 @@
+<head>
+<title>検索画面</title>
+</head>
+<mat-toolbar>
+    <a routerLink="."><img src="assets/img/money.png"/></a>
+    <a>支出管理アプリ Search</a>
+</mat-toolbar>
+
+<br>
+<div *ngIf="shishutsuModels.length > 0">
+    <p>検索結果</p>
+    <table>
+        <tr>
+            <th>ユーザID</th><th>費用名称</th><th>費用種別</th><th>月額</th>
+        </tr>
+        <tr *ngFor="let shishutsuModel of shishutsuModels">
+            <td>{{shishutsuModel.userId}}</td>
+            <td>{{shishutsuModel.costName}}</td>
+            <td>{{shishutsuModel.costType}}</td>
+            <td>{{shishutsuModel.cost}}</td>
+        </tr>
+    </table>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="content" role="main">
+    <button  mat-raised-button color="primary" routerLink="/mainMenu">メインメニューへ戻る</button> 
+</div>

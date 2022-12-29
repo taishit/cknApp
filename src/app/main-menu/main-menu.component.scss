@@ -1,0 +1,92 @@
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+     
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+     
+  .example-sidenav-container {
+    flex: 1;
+  }
+  
+  mat-sidenav-content {
+    height: 100vh;
+   }
+  
+  mat-sidenav {
+    background-color:#ffffff;
+    color: rgb(0, 0, 0);
+    width: 210px;
+  }
+  
+  mat-toolbar {
+    background-color:#333333;
+    color: rgb(255, 255, 255);
+  }
+  
+  .white-icon {
+    color: rgb(0, 0, 0);
+  }
+  
+  .menu-icon {
+    padding-right: 20px;
+  }
+  
+  span {
+    color: rgb(0, 0, 0);
+  }
+  
+  a.list-group-item {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    font-size: 18px;
+  }
+  
+  a.list-group-item-action:hover {
+    background-color: #22b7ce;
+  }
+  
+  body{
+    background-image: url("../../assets/img/back.png");
+    background-size: cover;
+  
+  }
